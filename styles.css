@@ -115,64 +115,24 @@ body {
     width: 40px;
     height: 40px;
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
-.mcet-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #1e3a8a, #4f46e5);
-    border-radius: 50%;
-    border: 2px solid #ffffff;
-}
-
-.logo-compass {
-    position: relative;
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.compass-cross {
-    position: relative;
-    width: 20px;
-    height: 20px;
-}
-
-.cross-vertical, .cross-horizontal {
-    position: absolute;
+.mcet-official-logo {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
     background: white;
-    border-radius: 1px;
-}
-
-.cross-vertical {
-    width: 2px;
-    height: 20px;
-    left: 50%;
-    top: 0;
-    transform: translateX(-50%);
-}
-
-.cross-horizontal {
-    width: 20px;
-    height: 2px;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
-}
-
-.compass-circle {
-    position: absolute;
-    width: 24px;
-    height: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
     border-radius: 50%;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    padding: 4px;
+    border: 2px solid #e2e8f0;
+    transition: all 0.3s ease;
+}
+
+.mcet-official-logo:hover {
+    transform: scale(1.1);
+    border-color: #4f46e5;
+    box-shadow: 0 4px 8px rgba(79, 70, 229, 0.2);
 }
 
 .logo-text {
