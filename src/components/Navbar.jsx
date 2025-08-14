@@ -64,7 +64,7 @@ const Navbar = () => {
                 }
               }}
             >
-              About Us <i className="fas fa-chevron-down"></i>
+              About <i className="fas fa-chevron-down"></i>
             </a>
             <div className="dropdown-menu">
               <a href="#about" onClick={(e) => handleLinkClick(e, '#about')}>Overview</a>
