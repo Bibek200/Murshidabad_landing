@@ -95,23 +95,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // Number counter animation for stats
     const statNumbers = document.querySelectorAll('.stat-number');
     const countUp = (el, target) => {
-        const increment = target / 50;
+        // Extract the numeric value and suffix
+        const text = target.toString();
+        const numericValue = parseInt(text.replace(/[^\d]/g, ''));
+        const suffix = text.replace(/[\d]/g, '');
+
+        if (isNaN(numericValue)) return;
+
+        const increment = numericValue / 50;
         let current = 0;
-        
+
         const timer = setInterval(() => {
             current += increment;
-            if (current >= target) {
-                current = target;
+            if (current >= numericValue) {
+                current = numericValue;
                 clearInterval(timer);
             }
-            
-            if (target.toString().includes('%')) {
-                el.textContent = Math.ceil(current) + '%';
-            } else if (target.toString().includes('+')) {
-                el.textContent = Math.ceil(current) + '+';
-            } else {
-                el.textContent = Math.ceil(current);
-            }
+
+            el.textContent = Math.ceil(current) + suffix;
         }, 20);
     };
 
@@ -120,8 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting && !entry.target.dataset.animated) {
                 const text = entry.target.textContent;
-                const number = parseInt(text.replace(/[^\d]/g, ''));
                 entry.target.dataset.animated = 'true';
+                entry.target.textContent = '0';
                 countUp(entry.target, text);
             }
         });
