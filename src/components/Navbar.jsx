@@ -45,14 +45,14 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="nav-container">
-        <div className="nav-logo">
-          <img 
-            src="https://cdn.builder.io/api/v1/image/assets%2F261aba5d7af5410ca5dd573a40fe4719%2Fb3d1d018843c47fca3a05a486b5dcdb3?format=webp&width=800" 
-            alt="MCET BHB Logo" 
-            className="logo-img mcet-official-logo"
-          />
-          <span className="logo-text">MCET BHB</span>
-        </div>
+        // <div className="nav-logo">
+        //   <img 
+        //     src="https://cdn.builder.io/api/v1/image/assets%2F261aba5d7af5410ca5dd573a40fe4719%2Fb3d1d018843c47fca3a05a486b5dcdb3?format=webp&width=800" 
+        //     alt="MCET BHB Logo" 
+        //     className="logo-img mcet-official-logo"
+        //   />
+        //   <span className="logo-text">MCET BHB</span>
+        // </div>
         
         <div className={`nav-menu ${isMenuOpen ? 'active' : ''}`}>
           <div className="nav-item">
