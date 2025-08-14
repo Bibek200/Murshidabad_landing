@@ -1,0 +1,103 @@
+/* Admissions Section */
+.admissions {
+    padding: 120px 0;
+}
+
+.admissions-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 80px;
+    align-items: start;
+}
+
+.timeline {
+    position: relative;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background: #e2e8f0;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 80px;
+    margin-bottom: 48px;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 1.125rem;
+}
+
+.timeline-content h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+}
+
+.timeline-content p {
+    color: #64748b;
+}
+
+.help-card {
+    background: white;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: fit-content;
+}
+
+.help-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 16px;
+}
+
+.help-card p {
+    color: #64748b;
+    margin-bottom: 24px;
+}
+
+.contact-info {
+    margin-bottom: 32px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    justify-content: center;
+}
+
+.contact-item i {
+    color: #4f46e5;
+    width: 20px;
+}
+
+@media (max-width: 768px) {
+    .admissions-content {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+}
