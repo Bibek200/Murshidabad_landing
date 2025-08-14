@@ -715,9 +715,133 @@ body {
     width: 20px;
 }
 
+/* Facilities Section */
+.facilities {
+    padding: 120px 0;
+    background: #f8fafc;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.facility-card {
+    background: white;
+    padding: 40px 24px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+}
+
+.facility-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.facility-icon {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.facility-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.facility-card h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 12px;
+}
+
+.facility-card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Training & Placement Section */
+.placement {
+    padding: 120px 0;
+}
+
+.placement-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.placement-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.placement-stat {
+    background: white;
+    padding: 32px;
+    border-radius: 16px;
+    text-align: center;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    border-left: 4px solid #4f46e5;
+}
+
+.placement-stat h3 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #1e3a8a;
+    margin-bottom: 8px;
+}
+
+.placement-stat p {
+    color: #64748b;
+    font-weight: 500;
+}
+
+.placement-companies h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1e3a8a;
+    margin-bottom: 16px;
+}
+
+.placement-companies p {
+    color: #64748b;
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+.company-logos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 16px;
+}
+
+.company-logo {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    color: white;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
 /* Campus Life Section */
 .campus-life {
     padding: 120px 0;
+    background: #f8fafc;
 }
 
 .campus-grid {
@@ -1103,7 +1227,20 @@ body {
     .campus-grid {
         grid-template-columns: 1fr;
     }
-    
+
+    .facilities-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .placement-content {
+        grid-template-columns: 1fr;
+        gap: 48px;
+    }
+
+    .company-logos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .hero-buttons {
         flex-direction: column;
         align-items: center;
