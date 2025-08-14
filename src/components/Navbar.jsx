@@ -31,7 +31,7 @@ const Navbar = () => {
     if (href.startsWith('#')) {
       const element = document.querySelector(href)
       if (element) {
-        const offsetTop = element.offsetTop - 80
+        const offsetTop = element.offsetTop - 160
         window.scrollTo({
           top: offsetTop,
           behavior: 'smooth'
